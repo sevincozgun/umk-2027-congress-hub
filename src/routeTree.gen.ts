@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OzetGonderRouteImport } from './routes/ozet-gonder'
+import { Route as OrganizasyonRouteImport } from './routes/organizasyon'
+import { Route as KonuBasliklariRouteImport } from './routes/konu-basliklari'
+import { Route as KongreMekaniRouteImport } from './routes/kongre-mekani'
+import { Route as KayitBilgileriRouteImport } from './routes/kayit-bilgileri'
+import { Route as IletisimRouteImport } from './routes/iletisim'
+import { Route as DavetliKonusmacilarRouteImport } from './routes/davetli-konusmacilar'
 import { Route as IndexRouteImport } from './routes/index'
 
+const OzetGonderRoute = OzetGonderRouteImport.update({
+  id: '/ozet-gonder',
+  path: '/ozet-gonder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizasyonRoute = OrganizasyonRouteImport.update({
+  id: '/organizasyon',
+  path: '/organizasyon',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KonuBasliklariRoute = KonuBasliklariRouteImport.update({
+  id: '/konu-basliklari',
+  path: '/konu-basliklari',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KongreMekaniRoute = KongreMekaniRouteImport.update({
+  id: '/kongre-mekani',
+  path: '/kongre-mekani',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KayitBilgileriRoute = KayitBilgileriRouteImport.update({
+  id: '/kayit-bilgileri',
+  path: '/kayit-bilgileri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IletisimRoute = IletisimRouteImport.update({
+  id: '/iletisim',
+  path: '/iletisim',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DavetliKonusmacilarRoute = DavetliKonusmacilarRouteImport.update({
+  id: '/davetli-konusmacilar',
+  path: '/davetli-konusmacilar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/davetli-konusmacilar': typeof DavetliKonusmacilarRoute
+  '/iletisim': typeof IletisimRoute
+  '/kayit-bilgileri': typeof KayitBilgileriRoute
+  '/kongre-mekani': typeof KongreMekaniRoute
+  '/konu-basliklari': typeof KonuBasliklariRoute
+  '/organizasyon': typeof OrganizasyonRoute
+  '/ozet-gonder': typeof OzetGonderRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/davetli-konusmacilar': typeof DavetliKonusmacilarRoute
+  '/iletisim': typeof IletisimRoute
+  '/kayit-bilgileri': typeof KayitBilgileriRoute
+  '/kongre-mekani': typeof KongreMekaniRoute
+  '/konu-basliklari': typeof KonuBasliklariRoute
+  '/organizasyon': typeof OrganizasyonRoute
+  '/ozet-gonder': typeof OzetGonderRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/davetli-konusmacilar': typeof DavetliKonusmacilarRoute
+  '/iletisim': typeof IletisimRoute
+  '/kayit-bilgileri': typeof KayitBilgileriRoute
+  '/kongre-mekani': typeof KongreMekaniRoute
+  '/konu-basliklari': typeof KonuBasliklariRoute
+  '/organizasyon': typeof OrganizasyonRoute
+  '/ozet-gonder': typeof OzetGonderRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/davetli-konusmacilar'
+    | '/iletisim'
+    | '/kayit-bilgileri'
+    | '/kongre-mekani'
+    | '/konu-basliklari'
+    | '/organizasyon'
+    | '/ozet-gonder'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/davetli-konusmacilar'
+    | '/iletisim'
+    | '/kayit-bilgileri'
+    | '/kongre-mekani'
+    | '/konu-basliklari'
+    | '/organizasyon'
+    | '/ozet-gonder'
+  id:
+    | '__root__'
+    | '/'
+    | '/davetli-konusmacilar'
+    | '/iletisim'
+    | '/kayit-bilgileri'
+    | '/kongre-mekani'
+    | '/konu-basliklari'
+    | '/organizasyon'
+    | '/ozet-gonder'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DavetliKonusmacilarRoute: typeof DavetliKonusmacilarRoute
+  IletisimRoute: typeof IletisimRoute
+  KayitBilgileriRoute: typeof KayitBilgileriRoute
+  KongreMekaniRoute: typeof KongreMekaniRoute
+  KonuBasliklariRoute: typeof KonuBasliklariRoute
+  OrganizasyonRoute: typeof OrganizasyonRoute
+  OzetGonderRoute: typeof OzetGonderRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ozet-gonder': {
+      id: '/ozet-gonder'
+      path: '/ozet-gonder'
+      fullPath: '/ozet-gonder'
+      preLoaderRoute: typeof OzetGonderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organizasyon': {
+      id: '/organizasyon'
+      path: '/organizasyon'
+      fullPath: '/organizasyon'
+      preLoaderRoute: typeof OrganizasyonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/konu-basliklari': {
+      id: '/konu-basliklari'
+      path: '/konu-basliklari'
+      fullPath: '/konu-basliklari'
+      preLoaderRoute: typeof KonuBasliklariRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kongre-mekani': {
+      id: '/kongre-mekani'
+      path: '/kongre-mekani'
+      fullPath: '/kongre-mekani'
+      preLoaderRoute: typeof KongreMekaniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kayit-bilgileri': {
+      id: '/kayit-bilgileri'
+      path: '/kayit-bilgileri'
+      fullPath: '/kayit-bilgileri'
+      preLoaderRoute: typeof KayitBilgileriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iletisim': {
+      id: '/iletisim'
+      path: '/iletisim'
+      fullPath: '/iletisim'
+      preLoaderRoute: typeof IletisimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/davetli-konusmacilar': {
+      id: '/davetli-konusmacilar'
+      path: '/davetli-konusmacilar'
+      fullPath: '/davetli-konusmacilar'
+      preLoaderRoute: typeof DavetliKonusmacilarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +197,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DavetliKonusmacilarRoute: DavetliKonusmacilarRoute,
+  IletisimRoute: IletisimRoute,
+  KayitBilgileriRoute: KayitBilgileriRoute,
+  KongreMekaniRoute: KongreMekaniRoute,
+  KonuBasliklariRoute: KonuBasliklariRoute,
+  OrganizasyonRoute: OrganizasyonRoute,
+  OzetGonderRoute: OzetGonderRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
