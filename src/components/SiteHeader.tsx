@@ -1,6 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ituLogo from "@/assets/itu-logo.png.asset.json";
+import gaunLogo from "@/assets/gaun-logo.png.asset.json";
+import tumtmkLogo from "@/assets/tumtmk-logo.png.asset.json";
+
+const orgLogos = [
+  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi" },
+  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi" },
+  { src: tumtmkLogo.url, alt: "TÜMTMK" },
+];
 
 const navItems = [
   { to: "/", label: "Ana Sayfa" },
@@ -19,10 +28,14 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3 text-primary-foreground">
-          <div className="flex h-12 w-12 items-center justify-center rounded-md bg-accent text-accent-foreground font-display text-xl font-bold shadow-md">
-            25
+          <div className="flex items-center gap-2">
+            {orgLogos.map((l) => (
+              <div key={l.alt} className="flex h-12 w-12 items-center justify-center rounded-md bg-white p-1 shadow-md">
+                <img src={l.src} alt={l.alt} className="max-h-full max-w-full object-contain" />
+              </div>
+            ))}
           </div>
-          <div className="leading-tight">
+          <div className="hidden leading-tight sm:block">
             <div className="font-display text-lg font-semibold">UMK 2027</div>
             <div className="text-xs opacity-80">25. Ulusal Mekanik Kongresi</div>
           </div>
