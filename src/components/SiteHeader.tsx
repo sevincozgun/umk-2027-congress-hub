@@ -6,9 +6,9 @@ import gaunLogo from "@/assets/gaun-logo.png.asset.json";
 import tumtmkLogo from "@/assets/tumtmk-logo.png.asset.json";
 
 const orgLogos = [
-  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi" },
-  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi" },
-  { src: tumtmkLogo.url, alt: "TÜMTMK" },
+  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi", shape: "rounded-[50%] h-12 w-10" },
+  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi", shape: "rounded-full h-12 w-12" },
+  { src: tumtmkLogo.url, alt: "TÜMTMK", shape: "rounded-lg h-12 w-10" },
 ];
 
 const navItems = [
