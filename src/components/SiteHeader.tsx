@@ -6,9 +6,9 @@ import gaunLogo from "@/assets/gaun-logo.png.asset.json";
 import tumtmkLogo from "@/assets/tumtmk-logo.png.asset.json";
 
 const orgLogos = [
-  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi" },
-  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi" },
-  { src: tumtmkLogo.url, alt: "TÜMTMK" },
+  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi", wrap: "h-14 w-12 rounded-[50%]" },
+  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi", wrap: "h-14 w-14 rounded-full" },
+  { src: tumtmkLogo.url, alt: "TÜMTMK", wrap: "h-14 w-12 rounded-lg" },
 ];
 
 const navItems = [
@@ -27,10 +27,15 @@ export function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-3 text-primary-foreground">
+        <Link to="/" className="flex items-center gap-5 text-primary-foreground">
           <div className="flex items-center gap-3">
             {orgLogos.map((l) => (
-              <img key={l.alt} src={l.src} alt={l.alt} className="h-14 w-auto object-contain" />
+              <div
+                key={l.alt}
+                className={`flex items-center justify-center overflow-hidden bg-white shadow-md ${l.wrap}`}
+              >
+                <img src={l.src} alt={l.alt} className="h-full w-full object-contain" />
+              </div>
             ))}
           </div>
           <div className="hidden leading-tight sm:block">
