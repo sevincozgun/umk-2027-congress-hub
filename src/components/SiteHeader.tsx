@@ -1,6 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ituLogo from "@/assets/itu-logo.png.asset.json";
+import gaunLogo from "@/assets/gaun-logo.png.asset.json";
+import tumtmkLogo from "@/assets/tumtmk-logo.png.asset.json";
+
+const orgLogos = [
+  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi" },
+  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi" },
+  { src: tumtmkLogo.url, alt: "TÜMTMK" },
+];
 
 const navItems = [
   { to: "/", label: "Ana Sayfa" },
