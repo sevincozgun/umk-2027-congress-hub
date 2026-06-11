@@ -6,9 +6,9 @@ import gaunLogo from "@/assets/gaun-logo.png.asset.json";
 import tumtmkLogo from "@/assets/tumtmk-logo.png.asset.json";
 
 const orgLogos = [
-  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi" },
-  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi" },
-  { src: tumtmkLogo.url, alt: "TÜMTMK" },
+  { src: ituLogo.url, alt: "İstanbul Teknik Üniversitesi", shape: "rounded-[50%] h-12 w-10" },
+  { src: gaunLogo.url, alt: "Gaziantep Üniversitesi", shape: "rounded-full h-12 w-12" },
+  { src: tumtmkLogo.url, alt: "TÜMTMK", shape: "rounded-lg h-12 w-10" },
 ];
 
 const navItems = [
@@ -30,8 +30,11 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3 text-primary-foreground">
           <div className="flex items-center gap-2">
             {orgLogos.map((l) => (
-              <div key={l.alt} className="flex h-12 w-12 items-center justify-center rounded-md bg-white p-1 shadow-md">
-                <img src={l.src} alt={l.alt} className="max-h-full max-w-full object-contain" />
+              <div
+                key={l.alt}
+                className={`flex items-center justify-center bg-white shadow-md ${l.shape}`}
+              >
+                <img src={l.src} alt={l.alt} className="max-h-full max-w-full object-contain p-0.5" />
               </div>
             ))}
           </div>
