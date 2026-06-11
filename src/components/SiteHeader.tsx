@@ -28,11 +28,14 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3 text-primary-foreground">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             {orgLogos.map((l) => (
-              <div key={l.alt} className="flex h-12 w-12 items-center justify-center rounded-md bg-white p-1 shadow-md">
-                <img src={l.src} alt={l.alt} className="max-h-full max-w-full object-contain" />
-              </div>
+              <img
+                key={l.alt}
+                src={l.src}
+                alt={l.alt}
+                className="h-12 w-auto object-contain drop-shadow-md"
+              />
             ))}
           </div>
           <div className="hidden leading-tight sm:block">
