@@ -1,12 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
 import { Calendar, MapPin, Users, FileText, Mic, BookOpen } from "lucide-react";
-import heroCampus from "@/assets/hero-campus.jpg";
 import heroGate from "@/assets/hero-gate.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-
-const heroImages = [heroCampus, heroGate];
 
 export const Route = createFileRoute("/")({
   head: () => ({
