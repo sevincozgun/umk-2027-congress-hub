@@ -30,24 +30,16 @@ const highlights = [
 ];
 
 function HomePage() {
-  const [activeHero, setActiveHero] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => setActiveHero((i) => (i + 1) % heroImages.length), 6000);
-    return () => clearInterval(id);
-  }, []);
   return (
     <div>
       <section className="relative isolate min-h-screen overflow-hidden text-primary-foreground">
-        {heroImages.map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt="Gaziantep Üniversitesi"
-            className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-[1500ms] ${i === activeHero ? "opacity-100" : "opacity-0"}`}
-            width={1920}
-            height={1080}
-          />
-        ))}
+        <img
+          src={heroGate}
+          alt="Gaziantep Üniversitesi"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
         <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-overlay)" }} />
 
         <SiteHeader />
