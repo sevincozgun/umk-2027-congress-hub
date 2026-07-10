@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "UMK 2027 — 25. Ulusal Mekanik Kongresi" },
-      { name: "description", content: "25. Ulusal Mekanik Kongresi, Mayıs 2027, Gaziantep Üniversitesi ev sahipliğinde düzenlenecektir." },
+      { name: "description", content: "25. Ulusal Mekanik Kongresi, Eylül 2027, Gaziantep Üniversitesi ev sahipliğinde düzenlenecektir." },
     ],
   }),
   component: HomePage,
@@ -16,10 +16,10 @@ export const Route = createFileRoute("/")({
 
 const importantDates = [
   { label: "Özet Gönderimi Başlangıcı", date: "Eylül 2026" },
-  { label: "Özet Gönderimi Son Tarih", date: "Aralık 2026" },
-  { label: "Kabul İlanı", date: "Ocak 2027" },
-  { label: "Erken Kayıt Son Tarih", date: "Şubat 2027" },
-  { label: "Kongre Tarihleri", date: "Mayıs 2027" },
+  { label: "Özet Gönderimi Son Tarih", date: "Nisan 2027" },
+  { label: "Kabul İlanı", date: "Mayıs 2027" },
+  { label: "Erken Kayıt Son Tarih", date: "Haziran 2027" },
+  { label: "Kongre Tarihleri", date: "Eylül 2027" },
 ];
 
 const highlights = [
@@ -53,7 +53,7 @@ function HomePage() {
             25. Ulusal<br />Mekanik Kongresi
           </h1>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-base sm:text-lg">
-            <span className="inline-flex items-center gap-2"><Calendar className="h-5 w-5 text-accent" /> Mayıs 2027</span>
+            <span className="inline-flex items-center gap-2"><Calendar className="h-5 w-5 text-accent" /> Eylül 2027</span>
             <span className="inline-flex items-center gap-2"><MapPin className="h-5 w-5 text-accent" /> Gaziantep, Türkiye</span>
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
