@@ -44,7 +44,7 @@ function HomePage() {
 
         <SiteHeader />
 
-        <div className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-4 text-center sm:px-6">
+        <div className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-4 pb-32 text-center sm:px-6 sm:pb-40 lg:pb-52">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-accent" />
             Gaziantep Üniversitesi ev sahipliğinde
