@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Calendar, MapPin, Users, FileText, Mic, BookOpen } from "lucide-react";
-import heroGate from "@/assets/hero-gate.jpg";
+import heroGate from "@/assets/hero-gate.jpg.asset.json";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -34,7 +34,7 @@ function HomePage() {
     <div>
       <section className="relative isolate min-h-screen overflow-hidden text-primary-foreground">
         <img
-          src={heroGate}
+          src={heroGate.url}
           alt="Gaziantep Üniversitesi"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
           width={1920}
