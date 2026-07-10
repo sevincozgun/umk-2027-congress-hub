@@ -34,7 +34,7 @@ function HomePage() {
     <div>
       <section className="relative isolate min-h-screen overflow-hidden text-primary-foreground">
         <img
-          src={heroGate}
+          src={heroGate.url}
           alt="Gaziantep Üniversitesi"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
           width={1920}
