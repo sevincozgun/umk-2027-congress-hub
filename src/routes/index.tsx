@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Calendar, MapPin, Users, FileText, Mic, BookOpen } from "lucide-react";
-import heroGate from "@/assets/hero-gate.jpg";
+import heroGate from "@/assets/hero-gate.jpg.asset.json";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
